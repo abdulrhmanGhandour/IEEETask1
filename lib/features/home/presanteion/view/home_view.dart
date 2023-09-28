@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ieee_task1/features/home/presanteion/view/widgets/custom_app_bar_home.dart';
 import 'package:ieee_task1/features/home/presanteion/view/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -11,8 +10,8 @@ class HomeView extends StatelessWidget {
       child:  Scaffold(
         body: Column(
           children: [
-            CustomAppBarHome(),
-            HomeViewBody(),
+           
+           HomeViewBody(),
           ],
         ),
       ),
