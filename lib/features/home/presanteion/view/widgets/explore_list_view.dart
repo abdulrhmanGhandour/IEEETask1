@@ -6,13 +6,23 @@ class ExploreListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemBuilder: (context, index) {
-              return const Padding(
-                padding:  EdgeInsets.symmetric(vertical: 10),
-                child: ExploreItem()
-              );
-            },
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * .36,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        separatorBuilder: (context, index) {
+          return const SizedBox(
+            width: 20,
+          );
+        },
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: ExploreItem(),
+          );
+        },
+      ),
     );
   }
 }
