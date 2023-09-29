@@ -3,6 +3,7 @@ import 'package:ieee_task1/const.dart';
 import 'package:ieee_task1/core/utls/styles.dart';
 import 'package:ieee_task1/core/utls/widgets/box_shadow.dart';
 import 'package:ieee_task1/core/utls/widgets/custom_image.dart';
+import 'package:ieee_task1/features/prodact/presanteion/view/Prodact_view.dart';
 
 class BestSellingItem extends StatelessWidget {
   const BestSellingItem({super.key});
@@ -48,7 +49,9 @@ class BestSellingItem extends StatelessWidget {
             const SizedBox(width: 44,),
             IconButton(
               padding: EdgeInsets.zero,
-              onPressed: () {},
+              onPressed: () {
+                  Navigator.pushNamed(context, ProdactView.id);
+              },
               icon: const Icon(Icons.arrow_circle_right),
               color: kNavyBlueColor,
               iconSize: 40,

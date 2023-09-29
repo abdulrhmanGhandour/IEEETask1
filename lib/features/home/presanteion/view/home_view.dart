@@ -4,13 +4,13 @@ import 'package:ieee_task1/features/home/presanteion/view/widgets/home_view_body
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
+static String id = 'HomeView';
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
       child:  Scaffold(
         body: Column(
           children: [
-           
            HomeViewBody(),
           ],
         ),
