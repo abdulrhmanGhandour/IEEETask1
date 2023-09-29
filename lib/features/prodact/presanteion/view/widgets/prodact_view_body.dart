@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ieee_task1/const.dart';
+import 'package:ieee_task1/core/utls/styles.dart';
+
 import 'package:ieee_task1/core/utls/widgets/custom_app_bar.dart';
 import 'package:ieee_task1/features/prodact/presanteion/view/widgets/deatels_section.dart';
 
@@ -8,7 +11,7 @@ class ProdactViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Stack(
           children: [
@@ -22,7 +25,36 @@ class ProdactViewBody extends StatelessWidget {
           ],
         ),
         const DeatelsSection(),
-        
+        GestureDetector(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 190),
+            child: Container(
+              height: 57,
+              decoration: const BoxDecoration(
+                color: kNavyBlueColor,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(60),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    'Add Card',
+                    style: Styles.textStyle16.copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
