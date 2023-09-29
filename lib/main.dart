@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ieee_task1/features/card/presanteion/view/card_view.dart';
 
 import 'package:ieee_task1/features/home/presanteion/view/home_view.dart';
 import 'package:ieee_task1/features/prodact/presanteion/view/Prodact_view.dart';
@@ -15,14 +16,16 @@ class IEEETask1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        routes: {
-          HomeView.id: (context) => const HomeView(),
-          ProdactView.id: (context) => const ProdactView(),
-        },
-        debugShowCheckedModeBanner: false,
-        initialRoute: HomeView.id,
-        theme: ThemeData().copyWith(
-          textTheme: GoogleFonts.montserratTextTheme(),
-        ));
+      routes: {
+        HomeView.id: (context) => const HomeView(),
+        ProdactView.id: (context) => const ProdactView(),
+        CardView.id:(context) => const CardView(),
+      },
+      debugShowCheckedModeBanner: false,
+      initialRoute: HomeView.id,
+      theme: ThemeData().copyWith(
+        textTheme: GoogleFonts.montserratTextTheme(),
+      ),
+    );
   }
 }

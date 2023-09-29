@@ -3,6 +3,7 @@ import 'package:ieee_task1/const.dart';
 import 'package:ieee_task1/core/utls/styles.dart';
 
 import 'package:ieee_task1/core/utls/widgets/custom_app_bar.dart';
+import 'package:ieee_task1/features/card/presanteion/view/card_view.dart';
 import 'package:ieee_task1/features/prodact/presanteion/view/widgets/deatels_section.dart';
 
 class ProdactViewBody extends StatelessWidget {
@@ -21,7 +22,12 @@ class ProdactViewBody extends StatelessWidget {
               ),
               child: Image.asset('assets/image/os.jpg'),
             ),
-            const CustomAppBar(text: 'Prodact'),
+            CustomAppBar(
+              text: 'Prodact',
+              onPressed: () {
+                Navigator.pushNamed(context, CardView.id);
+              },
+            ),
           ],
         ),
         const DeatelsSection(),

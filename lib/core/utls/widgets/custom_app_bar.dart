@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ieee_task1/const.dart';
 import 'package:ieee_task1/core/utls/styles.dart';
-import 'package:ieee_task1/core/utls/widgets/icons.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.text});
+  const CustomAppBar({super.key, required this.text, this.onPressed});
 
   final String text;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,20 @@ class CustomAppBar extends StatelessWidget {
           const Spacer(),
           Text(
             text,
-            style: Styles.textStyle18
-                .copyWith(color: kNavyBlueColor, fontWeight: FontWeight.bold),
+            style: Styles.textStyle18.copyWith(
+              color: kNavyBlueColor,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           const Spacer(),
-          const CartIcon(),
+          IconButton(
+            onPressed: onPressed,
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+              size: 28,
+              color: kNavyBlueColor,
+            ),
+          ),
         ],
       ),
     );
