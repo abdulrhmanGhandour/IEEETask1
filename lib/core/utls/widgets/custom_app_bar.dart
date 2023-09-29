@@ -4,7 +4,9 @@ import 'package:ieee_task1/core/utls/styles.dart';
 import 'package:ieee_task1/core/utls/widgets/icons.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,9 @@ class CustomAppBar extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            'Prodact',
-            style: Styles.textStyle18.copyWith(color: kNavyBlueColor),
+            text,
+            style: Styles.textStyle18
+                .copyWith(color: kNavyBlueColor, fontWeight: FontWeight.bold),
           ),
           const Spacer(),
           const CartIcon(),

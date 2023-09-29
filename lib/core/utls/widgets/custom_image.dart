@@ -7,7 +7,7 @@ class CustomImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
-      child: Image.asset('assets/image/strandmon.jpg'),
+      child: Image.asset('assets/image/os.jpg'),
     );
   }
 }
